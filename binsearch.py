@@ -72,15 +72,15 @@ def binary_search(da_array: list, needle, left:int=0, right:int=-1):
     # exception is lenght of list is zero
     if n==0:
         raise ValueError("cannot find into a empty list")
-    # exception is nan is in the list
-    if sum(np.isnan(da_array)) != 0:
-        raise TypeError("There is a nan in the list")
     # exception if there is a char in the list
     try:
         np.array(da_array)
     except Exception as e:    
         raise SyntaxError('there is a char in the list')
-
+        
+    # exception is nan is in the list
+    if np.sum([np.isnan(e) for e in da_array if type(e) != str]) != 0:
+        raise TypeError("There is a nan in the list")
     if left==0:
         rangemin = 0
     else:

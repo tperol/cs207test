@@ -23,16 +23,11 @@ class MyTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             binary_search([1,float("nan"),4],5)
 
-    # def test_mymath(self):
-    #     self.assertEqual(myaverage([2,3]), 2.5)
         
-    def test_char(self):
-        with self.assertRaises(SyntaxError):
-            binary_search([1,"blabla",4],5)
+    # def test_char(self):
+    #     with self.assertRaises(SyntaxError):
+    #         binary_search([1,"blabla",4],5)
             
-    # def test_zerol(self):
-    #     with self.assertRaises(ValueError):
-    #         myaverage([])
 
 
 
